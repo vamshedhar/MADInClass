@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.vamshedhar.contacts.ContactListActivity">
+
+    <Button
+        android:id="@+id/createContactBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Create"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+    <!--<Button-->
+        <!--android:id="@+id/logoutBtn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="@string/logout"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textSize="18sp" />-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/contactList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/createContactBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contactList"
+        android:layout_alignStart="@+id/contactList"
+        android:layout_marginBottom="13dp"
+        android:text="Vamshedhar"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/editBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/username"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/username"
+        android:src="@android:drawable/ic_menu_edit" />
+</RelativeLayout>

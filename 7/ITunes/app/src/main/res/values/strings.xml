@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ITunes</string>
+    <string name="ascending">Ascending</string>
+    <string name="filtered_apps">Filtered Apps:</string>
+    <string name="price">Price:</string>
+    <string name="descending">Descending</string>
+</resources>

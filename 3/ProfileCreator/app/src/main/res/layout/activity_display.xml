@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.vamshedhar.profilecreator.DisplayActivity">
+
+    <ImageView
+        android:id="@+id/profilePicValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/select_avatar"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:id="@+id/nameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/profilePicValue"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/nameTitleText"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nameValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/nameTitle"
+        android:layout_alignBottom="@+id/nameTitle"
+        android:layout_alignLeft="@+id/emailValue"
+        android:layout_alignStart="@+id/emailValue" />
+
+    <TextView
+        android:id="@+id/emailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameTitle"
+        android:layout_alignStart="@+id/nameTitle"
+        android:layout_below="@+id/nameTitle"
+        android:layout_marginTop="28dp"
+        android:text="@string/emailTitleText"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/emailValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/emailTitle"
+        android:layout_alignBottom="@+id/emailTitle"
+        android:layout_alignLeft="@+id/profilePicValue"
+        android:layout_alignStart="@+id/profilePicValue"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp" />
+
+    <TextView
+        android:id="@+id/deptTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deptTitleText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/emailTitle"
+        android:layout_alignLeft="@+id/emailTitle"
+        android:layout_alignStart="@+id/emailTitle"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:id="@+id/departmentValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/deptTitle"
+        android:layout_alignLeft="@+id/emailValue"
+        android:layout_alignStart="@+id/emailValue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/moodValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/deptTitle"
+        android:layout_alignStart="@+id/deptTitle"
+        android:layout_below="@+id/deptTitle"
+        android:layout_marginTop="33dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/moodImageValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/profilePicValue"
+        android:layout_alignStart="@+id/profilePicValue"
+        android:layout_below="@+id/moodValue"
+        android:layout_marginTop="35dp"
+        app:srcCompat="@drawable/awesome" />
+</RelativeLayout>

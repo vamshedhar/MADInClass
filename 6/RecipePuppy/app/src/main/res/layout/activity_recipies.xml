@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.vamshedhar.recipepuppy.Recipies">
+
+    <TextView
+        android:id="@+id/dishLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/title"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dishTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dishLabel"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/dishLabel"
+        android:text="Dish Name"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/dishImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/dishTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/no_image" />
+
+    <TextView
+        android:id="@+id/ingredientsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dishLabel"
+        android:layout_below="@+id/dishImage"
+        android:layout_marginTop="16dp"
+        android:text="@string/ingredients"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ingredientsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ingredientsLabel"
+        android:layout_below="@+id/ingredientsLabel"
+        android:layout_marginTop="12dp"
+        android:text="Ingredients List"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/urlLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ingredientsList"
+        android:layout_below="@+id/ingredientsList"
+        android:layout_marginTop="19dp"
+        android:text="@string/url"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/recipeURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/urlLabel"
+        android:layout_alignBottom="@+id/urlLabel"
+        android:layout_toEndOf="@+id/dishLabel"
+        android:text="http://facebook.com"
+        android:textColor="@android:color/holo_blue_light"
+        android:textColorLink="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:onClick="onURLClick"/>
+
+    <ProgressBar
+        android:id="@+id/requestProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/finish"
+        android:textSize="18sp"
+        android:onClick="onFinishClick"/>
+
+    <ImageView
+        android:id="@+id/previousBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitEnd"
+        app:srcCompat="@drawable/previous"
+        android:layout_marginRight="10dp"
+        android:layout_alignTop="@+id/finishButton"
+        android:layout_toStartOf="@+id/finishButton"
+        android:onClick="onPreviousClick"/>
+
+    <ImageView
+        android:id="@+id/firstBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/previousBtn"
+        android:layout_marginRight="10dp"
+        android:layout_toStartOf="@+id/previousBtn"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/first"
+        android:onClick="onFirstClick"/>
+
+    <ImageView
+        android:id="@+id/nextBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/finishButton"
+        android:layout_toEndOf="@+id/finishButton"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/next"
+        android:onClick="onNextClick"/>
+
+    <ImageView
+        android:id="@+id/lastBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/nextBtn"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/nextBtn"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/last"
+        android:onClick="onLastClick"/>
+
+    <ProgressBar
+        android:id="@+id/imageLoadProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/dishImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/loadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/requestProgress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/loading"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+</RelativeLayout>

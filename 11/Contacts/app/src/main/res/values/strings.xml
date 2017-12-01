@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="or">OR</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="login">Login</string>
+    <string name="not_registered">Not registered ?</string>
+    <string name="signup">SignUp</string>
+    <string name="submit">Submit</string>
+    <string name="sisButtonText">SIS</string>
+    <string name="csButtonText">CS</string>
+    <string name="bioButtonText">BIO</string>
+    <string name="name">Name</string>
+    <string name="department">Department</string>
+    <string name="phone">Phone</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="password_signup">Password (min 8 characters)</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="create_contact">Create</string>
+    <string name="logout">Logout</string>
+    <string name="selectAvatarTitleText">Select your Avatar</string>
+    <string name="not_a_member">Not a member? Sign Up</string>
+</resources>

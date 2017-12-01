@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.vamshedhar.inclass04.MainActivity">
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/name"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nameLabel"
+        android:layout_alignBottom="@+id/nameLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/nameLabel"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/deptLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/nameLabel"
+        android:layout_below="@+id/nameET"
+        android:layout_marginTop="40dp"
+        android:text="@string/dept"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/ageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/deptLabel"
+        android:layout_below="@+id/deptLabel"
+        android:layout_marginTop="40dp"
+        android:text="@string/age"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/zipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ageLabel"
+        android:layout_below="@+id/ageLabel"
+        android:layout_marginTop="40dp"
+        android:text="@string/zip"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/deptET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/nameET"
+        android:layout_below="@+id/nameET"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/ageET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ageLabel"
+        android:layout_alignBottom="@+id/ageLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/deptET"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/zipET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/zipLabel"
+        android:layout_alignBottom="@+id/zipLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/ageET"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/threadsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/zipET"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/threadsText"
+        android:onClick="onThreadClick"/>
+
+    <Button
+        android:id="@+id/asuncButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/threadsButton"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/asyncText"
+        android:onClick="onAsyncClick"/>
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/selectedPassword"
+        android:layout_alignStart="@+id/asuncButton"
+        android:onClick="clear"/>
+
+    <Button
+        android:id="@+id/closeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/close"
+        android:layout_alignBaseline="@+id/clearBtn"
+        android:layout_alignBottom="@+id/clearBtn"
+        android:layout_alignEnd="@+id/asuncButton"
+        android:onClick="close"/>
+
+    <TextView
+        android:id="@+id/selectedPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/asuncButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
+</RelativeLayout>

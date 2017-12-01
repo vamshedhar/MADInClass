@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="io.vamshedhar.profilecreator.MainActivity">
+
+
+    <EditText
+        android:id="@+id/nameTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="@string/nameTextHint"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/emailTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/nameTextBox"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="@string/emailTextHint"
+        android:inputType="textEmailAddress" />
+
+    <ImageView
+        android:id="@+id/profilePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        app:srcCompat="@drawable/select_avatar"
+        android:layout_below="@+id/emailTextBox"
+        android:layout_centerHorizontal="true"
+        android:onClick="onProfilePictureClick"/>
+
+    <TextView
+        android:id="@+id/departmentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/departmentLabelText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/profilePicture"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/departmentRadioGroup"
+        android:layout_below="@+id/departmentLabel"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp">
+
+        <RadioButton
+            android:id="@+id/sisButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/departmentLabel"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:textSize="18sp"
+            android:text="@string/sisButtonText" />
+
+        <RadioButton
+            android:id="@+id/csButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/sisButton"
+            android:layout_weight="1"
+            android:text="@string/csButtonText"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/bioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/csButton"
+            android:layout_weight="1"
+            android:text="@string/bioButtonText"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/currentMoodLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/currentMoodLabelText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/departmentRadioGroup"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/currentMood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/currentMoodLabel"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/currentMoodLabel"
+        android:layout_toRightOf="@+id/currentMoodLabel"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/currentMoodBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/currentMoodLabel"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/currentMoodImageView"
+        android:layout_toStartOf="@+id/currentMoodImageView"
+        android:max="3"
+        android:progress="0" />
+
+    <ImageView
+        android:id="@+id/currentMoodImageView"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/currentMood"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/angry" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentMoodImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="@string/submitButtonText"
+        android:textSize="18sp"
+        android:onClick="onSubmitClick"/>
+
+
+</RelativeLayout>

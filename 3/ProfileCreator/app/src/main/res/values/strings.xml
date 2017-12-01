@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Profile Creator</string>
+    <string name="nameTextHint">Name</string>
+    <string name="emailTextHint">Email</string>
+    <string name="departmentLabelText">Department:</string>
+    <string name="sisButtonText">SIS</string>
+    <string name="csButtonText">CS</string>
+    <string name="bioButtonText">BIO</string>
+    <string name="currentMoodLabelText">Your current mood:</string>
+    <string name="submitButtonText">Submit</string>
+    <string name="selectAvatarTitleText">Select your Avatar</string>
+    <string name="nameTitleText">Name:</string>
+    <string name="emailTitleText">Email:</string>
+    <string name="deptTitleText">Department:</string>
+    <string name="moodStart">I am </string>
+    <string name="angry">Angry</string>
+    <string name="sad">Sad</string>
+    <string name="happy">Happy</string>
+    <string name="awesome">Awesome</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">InClass04</string>
+    <string name="name">Name:</string>
+    <string name="dept">Dept:</string>
+    <string name="age">Age:</string>
+    <string name="zip">ZIP:</string>
+    <string name="threadsText">Generate Using Threads</string>
+    <string name="asyncText">Generate Using AsyncTask</string>
+    <string name="clear">Clear</string>
+    <string name="close">Close</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.vamshedhar.itunes.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/refreshButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/refresh_icon" />
+
+    <Switch
+        android:id="@+id/sortOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/refreshButton"
+        android:layout_marginEnd="15dp"
+        android:checked="true"
+        android:text="@string/ascending" />
+
+    <ListView
+        android:id="@+id/topAppsList"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignStart="@+id/refreshButton"
+        android:layout_below="@+id/refreshButton"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/filterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/topAppsList"
+        android:layout_below="@+id/topAppsList"
+        android:layout_marginTop="13dp"
+        android:text="@string/filtered_apps"
+        android:textSize="14sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/favApps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/filterLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:scrollbars="horizontal" />
+
+    <ProgressBar
+        android:id="@+id/mainProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/warningLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/filterLabel"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/filterLabel"
+        android:text="There is no filtered apps to display." />
+
+</RelativeLayout>

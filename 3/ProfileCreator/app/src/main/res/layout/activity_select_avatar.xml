@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.vamshedhar.profilecreator.SelectAvatar">
+
+    <TextView
+        android:id="@+id/selectAvatarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selectAvatarTitleText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/male1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp" />
+
+    <ImageView
+        android:id="@+id/female1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        app:srcCompat="@drawable/avatar_f_1"
+        android:layout_above="@+id/female2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp"
+        android:onClick="onImageClick"/>
+
+    <ImageView
+        android:id="@+id/female2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/avatar_f_2"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/female1"
+        android:layout_alignStart="@+id/female1"
+        android:onClick="onImageClick"/>
+
+    <ImageView
+        android:id="@+id/female3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/avatar_f_3"
+        android:layout_below="@+id/female2"
+        android:layout_alignLeft="@+id/female2"
+        android:layout_alignStart="@+id/female2"
+        android:onClick="onImageClick"/>
+
+    <ImageView
+        android:id="@+id/male1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/avatar_m_1"
+        android:layout_alignTop="@+id/female1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="60dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="onImageClick"/>
+
+    <ImageView
+        android:id="@+id/male2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/avatar_m_2"
+        android:layout_alignTop="@+id/female2"
+        android:layout_alignLeft="@+id/male1"
+        android:layout_alignStart="@+id/male1"
+        android:onClick="onImageClick"/>
+
+    <ImageView
+        android:id="@+id/male3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/male2"
+        android:layout_alignStart="@+id/male2"
+        android:layout_alignTop="@+id/female3"
+        android:onClick="onImageClick"
+        app:srcCompat="@drawable/avatar_m_3" />
+</RelativeLayout>
